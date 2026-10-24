@@ -1,7 +1,7 @@
 {
   "name": "dsh-session-sync-flush",
   "version": "0.1.0",
-  "description": "崩溃前一刻日志落盘：监听关键 session 事件主动触发 session/flush，把丢失窗口从整个请求缩小到单事件。",
+  "description": "DSH 插件：关键会话事件后立即 flush 日志，减少崩溃时丢对话。",
   "type": "module",
   "main": "lib/index.js",
   "exports": {
