@@ -1,0 +1,23 @@
+{
+  "name": "dsh-session-sync-flush",
+  "version": "0.1.0",
+  "description": "崩溃前一刻日志落盘：监听关键 session 事件主动触发 session/flush，把丢失窗口从整个请求缩小到单事件。",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./cordis.patch.yml": "./cordis.patch.yml"
+  },
+  "files": ["lib", "cordis.patch.yml"],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "compatibility": {
+      "dsh": "^0.1.5-rc.2",
+      "dshReleases": {
+        "0.1.5-rc.2": "compatible"
+      }
+    }
+  }
+}
